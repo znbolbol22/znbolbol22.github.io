@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Contact Mr=e - Zaid Nader Bolbol</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body> 
+<nav>
+    <a href="HomePage.html">Home</a>
+    <a href="ContactPage.html">Contact Me</a>
+</nav>
+<h1>Contact Me</h1>
+
+<form id="contactform">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" placeholder="Your Full Name"><br><br>
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" placeholder="Your Email Address:"><br><br>
+    <label for="country">Country:</label><br>
+    <input type="country" id="country" placeholder="Your Country"><br><br>
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" rows="4" cols="30" placeholder="Your Comments"></textarea><br><br>
+
+    <button type="button" onclick="ValidateForm()">Submit</button>
+</form>
+
+
+<script>
+    function ValidateForm(){
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const country = document.getElementById("country").value;
+        const comments = document.getElementById("comments").value;
+
+        if(name ==="" || email === ""|| country===""|| comments===""){
+            alert("Please fill in all fields before submitting. ");
+        } else{ 
+            alert("Form Submitted Successfully.")
+        }
+
+        
+
+    }
+</script>
+
+</body>
+</html>
